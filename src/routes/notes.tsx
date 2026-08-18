@@ -39,7 +39,7 @@ function NotesPage() {
         ]}
         initialValues={{ title: "", attendees: "", notes: "", detail: "Balanced" }}
         buildPrompt={(v) =>
-          `Summarize the following meeting.\n\nTitle: ${v.title || "not specified"}\nAttendees: ${v.attendees || "not specified"}\nDetail level: ${v.detail}\n\nNotes/transcript:\n"""\n${v.notes}\n"""`
+          `Summarize the following meeting.\n\nTitle: ${v['title'] || "not specified"}\nAttendees: ${v['attendees'] || "not specified"}\nDetail level: ${v['detail']}\n\nNotes/transcript:\n"""\n${v['notes']}\n"""`
         }
       />
     </AppShell>

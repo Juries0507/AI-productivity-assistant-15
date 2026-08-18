@@ -37,7 +37,7 @@ function PlannerPage() {
         ]}
         initialValues={{ goal: "", tasks: "", timeframe: "This week", capacity: "", style: "Deep work blocks" }}
         buildPrompt={(v) =>
-          `Create a task plan.\n\nGoal: ${v.goal}\nKnown tasks/constraints:\n${v.tasks || "(none provided)"}\nTimeframe: ${v.timeframe}\nDaily capacity: ${v.capacity || "not specified"}\nWorking style: ${v.style}`
+          `Create a task plan.\n\nGoal: ${v['goal']}\nKnown tasks/constraints:\n${v['tasks'] || "(none provided)"}\nTimeframe: ${v['timeframe']}\nDaily capacity: ${v['capacity'] || "not specified"}\nWorking style: ${v['style']}`
         }
       />
     </AppShell>

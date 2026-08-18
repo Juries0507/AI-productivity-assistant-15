@@ -39,7 +39,7 @@ function ResearchPage() {
         ]}
         initialValues={{ topic: "", context: "", audience: "Executive leadership", depth: "Standard brief" }}
         buildPrompt={(v) =>
-          `Research the following topic.\n\nTopic: ${v.topic}\nContext: ${v.context || "not specified"}\nAudience: ${v.audience}\nDepth: ${v.depth}`
+          `Research the following topic.\n\nTopic: ${v['topic']}\nContext: ${v['context'] || "not specified"}\nAudience: ${v['audience']}\nDepth: ${v['depth']}`
         }
       />
     </AppShell>

@@ -40,7 +40,7 @@ function EmailPage() {
         ]}
         initialValues={{ recipient: "", purpose: "", points: "", tone: "Professional", length: "Medium" }}
         buildPrompt={(v) =>
-          `Write a workplace email.\n\nRecipient: ${v.recipient}\nPurpose: ${v.purpose}\nKey points:\n${v.points || "(none provided)"}\nTone: ${v.tone}\nLength: ${v.length}\n\nReturn:\n**Subject:** <subject line>\n\nThen the email body with a suitable greeting and sign-off using [Your name].`
+          `Write a workplace email.\n\nRecipient: ${v['recipient']}\nPurpose: ${v['purpose']}\nKey points:\n${v['points'] || "(none provided)"}\nTone: ${v['tone']}\nLength: ${v['length']}\n\nReturn:\n**Subject:** <subject line>\n\nThen the email body with a suitable greeting and sign-off using [Your name].`
         }
       />
     </AppShell>
